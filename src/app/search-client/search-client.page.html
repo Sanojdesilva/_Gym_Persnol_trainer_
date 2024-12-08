@@ -1,0 +1,47 @@
+
+<!-- src/app/clients/clients.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Clients</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/add-client']">
+        <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <ion-list>
+    <ion-item *ngFor="let client of clients">
+      <ion-label>
+        <h2>{{ client.name }}</h2>
+        <p>ID: {{ client.client_id }}</p>
+        <p>Program: {{ client.fitness_program }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button [routerLink]="['/edit-client', client.client_id]">
+          <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+        </ion-button>
+        <ion-button color="danger" (click)="deleteClient(client.client_id)">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['/search-client']">
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="full" [routerLink]="'/home'">Back to Home</ion-button>
+</ion-footer>
+

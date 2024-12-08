@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add New Client</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="addClient()">
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name" name="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Date of Birth</ion-label>
+      <ion-input type="date" [(ngModel)]="dob" name="dob" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Gender</ion-label>
+      <ion-select [(ngModel)]="gender" name="gender" required>
+        <ion-select-option value="Male">Male</ion-select-option>
+        <ion-select-option value="Female">Female</ion-select-option>
+        <ion-select-option value="Unspecified">Unspecified</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Fitness Program</ion-label>
+      <ion-select [(ngModel)]="fitnessProgram" name="fitnessProgram" required>
+        <ion-select-option value="fat loss">Fat Loss</ion-select-option>
+        <ion-select-option value="muscle gain">Muscle Gain</ion-select-option>
+        <ion-select-option value="senior fitness">Senior Fitness</ion-select-option>
+        <ion-select-option value="pre/postnatal fitness">Pre/Postnatal Fitness</ion-select-option>
+        <ion-select-option value="overall fitness">Overall Fitness</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Joined Date</ion-label>
+      <ion-input type="date" [(ngModel)]="joinedDate" name="joinedDate" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ending Date</ion-label>
+      <ion-input type="date" [(ngModel)]="endingDate" name="endingDate" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Special Health Notes</ion-label>
+      <ion-textarea [(ngModel)]="specialHealthNotes" name="specialHealthNotes"></ion-textarea>
+    </ion-item>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+
+    <ion-button expand="full" type="submit" [disabled]="!name || !dob || !gender || !fitnessProgram || !email || !password || !joinedDate || !endingDate">
+      Add Client
+    </ion-button>
+  </form>
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="full" [routerLink]="'/home'">Back to Home</ion-button>
+</ion-footer>

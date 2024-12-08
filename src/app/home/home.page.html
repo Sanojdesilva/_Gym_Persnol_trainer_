@@ -1,0 +1,25 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="home-con">
+
+    <div *ngIf="trainerName" class="welcome-message">
+      <h2>Welcome, {{ trainerName }}!</h2>
+    </div>
+
+
+    <ion-button expand="full" [routerLink]="'/clients'">View Clients</ion-button>
+    <ion-button expand="full" [routerLink]="'/add-client'">Add Client</ion-button>
+    <ion-button expand="full" [routerLink]="'/search-client'">Search / Update Client</ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+
+  <ion-button expand="full" color="danger" (click)="logout()">Log Out</ion-button>
+</ion-footer>

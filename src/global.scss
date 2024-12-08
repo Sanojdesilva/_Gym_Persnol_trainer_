@@ -35,3 +35,172 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+body {
+  --background: #272c3d;
+  --ion-color-primary: #2a9d8f;
+  --ion-color-secondary: #0036a2;
+  --ion-color-tertiary: #f1f1f1;
+  --ion-color-light: #ffffff;
+  --ion-color-dark: #000000;
+  --ion-font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+
+  background-image: url('assets/img/GymBoy.jpg');
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.289);
+}
+
+
+
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px; /* Adding spase */
+  height: 100%;
+
+}
+
+ion-card {
+  width: 100%;
+  max-width: 400px; /* Maximum widthe */
+  border-radius: 15px; /* Round cornors */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow fo dept */
+  margin: 20px;
+  margin-top: auto;
+  background-color: var(--ion-color-light);
+  overflow: hidden;
+  padding: 20px;
+  justify-content: center;
+
+}
+
+
+ion-card-content {
+  padding: 20px;
+}
+
+
+ion-button {
+  --border-radius: 30px;
+  --padding-start: 25px;
+  --padding-end: 25px;
+  --font-size: 16px;
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+
+ion-button[color='primary'] {
+  background: linear-gradient(135deg, #2a9d8f, #34b6b6);
+  color: var(--ion-color-light);
+}
+
+ion-button[color='secondary'] {
+  background: linear-gradient(135deg, #0036a2, #0066cc);
+  color: var(--ion-color-light);
+}
+
+ion-button[color='tertiary'] {
+  background-color: var(--ion-color-tertiary); /* Light ash */
+  color: var(--ion-color-dark);
+}
+
+
+ion-header {
+  --background: var(--ion-color-secondary); /* Dark blu */
+  --color: var(--ion-color-light);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+ion-toolbar {
+  --background: var(--ion-color-secondary);
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+ion-title {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--ion-color-light);
+  padding-left: 65px; /* Spasing left */
+}
+
+
+ion-item {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  margin-bottom: 20px;
+  background-color: var(--ion-color-light);
+  border-radius: 15px; /* Rounded cornors */
+}
+
+
+ion-label {
+  font-weight: bold;
+  color: var(--ion-color-dark);
+}
+
+
+ion-text {
+  font-size: 16px;
+  color: var(--ion-color-dark);
+}
+
+
+ion-card {
+  margin: 10px auto;
+  padding: 15px;
+}
+
+
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+ion-input {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  background-color: transparent;
+  color: var(--ion-color-light);
+  border-radius: 10px; /* Rounded edgess */
+}
+
+ion-icon {
+  color: var(--ion-color-secondary); /* Dark blu*/
+}
+
+
+.footer-links ion-button {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: var(--ion-color-secondary); 
+}
+
+.error-message {
+  color: red;
+  margin: 10px 0;
+}
+
+.success-message {
+  color: green;
+  margin: 10px 0;
+}
